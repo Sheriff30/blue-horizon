@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="control.js" defer></script>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container1 {
+      padding: 20px;
+    }
+
+    .scale {
+      width: 120px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .container1 {
+      background-color: #f3f3f3;
+    }
+
+    .tables {
+      background-color: #ffffff;
+      padding: 1.25rem;
+      color: #828282;
+      border-radius: 4px;
+    }
+
+    .table {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      border-bottom: 1px solid #dadada;
+      margin-bottom: 1rem;
+    }
+
+    .tab-col {
+      border-top: 1px solid #dadada;
+      border-right: 1px solid #dadada;
+      border-left: 1px solid #dadada;
+      font-size: 12px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .mb {
+      margin-bottom: 10px;
+    }
+
+    .blue {
+      color: #3562b9 !important;
+    }
+
+    .scale2 {
+      width: 600px;
+    }
+
+    .book-btn {
+      width: 100px;
+    }
+
+    .table2 {
+      display: grid;
+      grid-template-columns: auto auto;
+      box-shadow: 0 8px 21px 0 rgba(0, 0, 0, 0.04);
+      margin-bottom: 1rem;
+    }
+
+    .book-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 14px;
+      padding: 0rem 2rem;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .flex {
+      display: flex;
+      gap: 1rem;
+    }
+
+    button {
+      width: 100px;
+      margin: auto 0;
+      height: 30px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="tables">
+          <img class="mb" src="/assets/Frame 63.png" alt="" />
+          <div class="table1 flex">
+            <div class="table">
+              <div class="tab-col">Tue, 05 Mar</div>
+              <div class="tab-col">Wed, 06 Mar</div>
+              <div class="tab-col">Thu, 07 Mar</div>
+              <div class="tab-col">Fri, 08 Mar</div>
+              <div class="tab-col">Sat, 09 Mar</div>
+              <div class="tab-col">Sun, 10 Mar</div>
+              <div class="tab-col">Mon, 11 Mar</div>
+              <div class="tab-col">Tue, 17 Mar</div>
+              <div class="tab-col">Wed, 18 Mar</div>
+              <div
+                class="tab-col price-table"
+                data-input="input1"
+                contenteditable="true"
+              ></div>
+              <div
+                class="tab-col price-table"
+                data-input="input2"
+                contenteditable="true"
+              ></div>
+              <div
+                class="blue tab-col price-table"
+                data-input="input3"
+                contenteditable="true"
+              ></div>
+              <div
+                class="tab-col price-table"
+                data-input="input4"
+                contenteditable="true"
+              ></div>
+              <div
+                class="tab-col price-table"
+                data-input="input5"
+                contenteditable="true"
+              ></div>
+              <div
+                class="tab-col price-table"
+                data-input="input6"
+                contenteditable="true"
+              ></div>
+              <div
+                class="blue tab-col price-table"
+                data-input="input7"
+                contenteditable="true"
+              ></div>
+              <div
+                class="tab-col price-table"
+                data-input="input8"
+                contenteditable="true"
+              ></div>
+              <div
+                class="blue tab-col price-table"
+                data-input="input9"
+                contenteditable="true"
+              ></div>
+            </div>
+            <button class="btn-update1">Upate</button>
+          </div>
+          <div class="flex">
+            <div class="table2">
+              <img class="scale2" src="/assets/Frame 31.png" alt="" />
+              <div class="book-container">
+                <p contenteditable="true" class="input10" data-price="input10">
+                  $6.00/kg
+                </p>
+                <a href="/c-page.html">
+                  <img
+                    src="/assets/Frame 26.png"
+                    alt="btn-book"
+                    class="book-btn"
+                  />
+                </a>
+              </div>
+            </div>
+            <button class="btn-update2">Update</button>
+          </div>
+          <div class="flex">
+            <div class="table2">
+              <img class="scale2" src="/assets/Frame 31-1.png" alt="" />
+              <div class="book-container">
+                <p contenteditable="true" class="input11" data-price="input11">
+                  $6.00/kg
+                </p>
+                <a href="/c-page.html">
+                  <img
+                    src="/assets/Frame 26.png"
+                    alt="btn-book"
+                    class="book-btn"
+                  />
+                </a>
+              </div>
+            </div>
+            <button class="btn-update3">Update</button>
+          </div>
+          <div class="flex">
+            <div class="table2">
+              <img class="scale2" src="/assets/Frame 31-2.png" alt="" />
+              <div class="book-container">
+                <p contenteditable="true" class="input12" data-price="input12">
+                  $6.00/kg
+                </p>
+                <a href="/c-page.html">
+                  <img
+                    src="/assets/Frame 26.png"
+                    alt="btn-book"
+                    class="book-btn"
+                  />
+                </a>
+              </div>
+            </div>
+            <button class="btn-update4">Update</button>
+          </div>
+          <div class="flex">
+            <div class="table2">
+              <img class="scale2" src="/assets/Frame 31-3.png" alt="" />
+              <div class="book-container">
+                <p contenteditable="true" class="input13" data-price="input13">
+                  $6.00/kg
+                </p>
+                <a href="/c-page.html">
+                  <img
+                    src="/assets/Frame 26.png"
+                    alt="btn-book"
+                    class="book-btn"
+                  />
+                </a>
+              </div>
+            </div>
+            <button class="btn-update5">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

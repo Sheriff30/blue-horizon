@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="control.js" defer></script>
   </head>
   <style>
     *,
@@ -124,21 +125,21 @@
             <div class="tab-col">Mon, 11 Mar</div>
             <div class="tab-col">Tue, 17 Mar</div>
             <div class="tab-col">Wed, 18 Mar</div>
-            <div class="tab-col">1</div>
-            <div class="tab-col">1</div>
-            <div class="blue tab-col">1</div>
-            <div class="tab-col">1</div>
-            <div class="tab-col">1</div>
-            <div class="tab-col">1</div>
-            <div class="blue tab-col">1</div>
-            <div class="tab-col">1</div>
-            <div class="blue tab-col">1</div>
+            <div class="tab-col price1">1</div>
+            <div class="tab-col price2">1</div>
+            <div class="blue tab-col price3">1</div>
+            <div class="tab-col price4">1</div>
+            <div class="tab-col price5">1</div>
+            <div class="tab-col price6">1</div>
+            <div class="blue tab-col price7">1</div>
+            <div class="tab-col price8">1</div>
+            <div class="blue tab-col price9">1</div>
           </div>
 
           <div class="table2">
             <img class="scale2" src="/assets/Frame 31.png" alt="" />
             <div class="book-container">
-              <p>$6.00/kg</p>
+              <p class="price10">$6.00/kg</p>
               <a href="/c-page.html">
                 <img
                   src="/assets/Frame 26.png"
@@ -151,7 +152,7 @@
           <div class="table2">
             <img class="scale2" src="/assets/Frame 31-1.png" alt="" />
             <div class="book-container">
-              <p>$6.00/kg</p>
+              <p class="price11">$6.00/kg</p>
               <a href="/c-page.html">
                 <img
                   src="/assets/Frame 26.png"
@@ -164,7 +165,7 @@
           <div class="table2">
             <img class="scale2" src="/assets/Frame 31-2.png" alt="" />
             <div class="book-container">
-              <p>$6.00/kg</p>
+              <p class="price12">$6.00/kg</p>
               <a href="/c-page.html">
                 <img
                   src="/assets/Frame 26.png"
@@ -177,7 +178,7 @@
           <div class="table2">
             <img class="scale2" src="/assets/Frame 31-3.png" alt="" />
             <div class="book-container">
-              <p>$6.00/kg</p>
+              <p class="price13">$6.00/kg</p>
               <a href="/c-page.html">
                 <img
                   src="/assets/Frame 26.png"
@@ -193,5 +194,28 @@
         <img src="/assets/Frame 42.png" alt="" />
       </div>
     </div>
+    <script>
+      const price10 = document.querySelector(".price10");
+      const price11 = document.querySelector(".price11");
+      const price12 = document.querySelector(".price12");
+      const price13 = document.querySelector(".price13");
+
+      const textValue = localStorage.getItem("input10");
+      if (textValue) {
+        document.querySelector(".price10").textContent = textValue;
+      }
+      const textValue2 = localStorage.getItem("input11");
+      if (textValue2) {
+        document.querySelector(".price11").textContent = textValue2;
+      }
+      const textValue3 = localStorage.getItem("input12");
+      if (textValue3) {
+        document.querySelector(".price12").textContent = textValue3;
+      }
+      const textValue4 = localStorage.getItem("input13");
+      if (textValue4) {
+        document.querySelector(".price13").textContent = textValue4;
+      }
+    </script>
   </body>
 </html>
