@@ -50,3 +50,48 @@ btnUpdate5?.addEventListener("click", function () {
   const inputValue = input13.textContent.trim();
   localStorage.setItem(inputName, inputValue);
 });
+
+function formatDate(inputDate) {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  // Create a Date object from the inputDate string
+  const dateObject = new Date(inputDate);
+
+  // Get day of the week (0-6)
+  const dayOfWeekIndex = dateObject.getDay();
+  const dayOfWeek = days[dayOfWeekIndex];
+
+  // Get day of the month (1-31)
+  const dayOfMonth = dateObject.getDate();
+
+  // Get month (0-11)
+  const monthIndex = dateObject.getMonth();
+  const month = months[monthIndex];
+
+  // Construct the formatted date string
+  const formattedDate = `${dayOfWeek}, ${dayOfMonth} ${month}`;
+
+  return formattedDate;
+}
+
+const dateBtn = document.querySelector(".date-btn");
+
+dateBtn.addEventListener("click", function () {
+  const dateInput = document.querySelector(".date-input").value;
+  const date = formatDate(dateInput);
+  localStorage.setItem("date", date);
+});

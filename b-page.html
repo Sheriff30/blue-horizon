@@ -106,10 +106,63 @@
       justify-content: center;
       text-align: center;
     }
+
+    .btn-search {
+      width: 160px;
+      margin-top: auto;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 740px auto;
+      gap: 2rem;
+    }
+
+    .info-container-div1,
+    .info-container-div2 {
+      display: flex;
+      font-size: 1.6rem;
+    }
+
+    .info-container-div2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .info-container-div1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 1rem;
+    }
+
+    .info-container-div2 div {
+      border: 1px solid gray;
+      padding: 1rem;
+    }
+
+    .info {
+      padding: 2rem;
+    }
   </style>
   <body>
     <img src="/assets/Frame 24.png" alt="" />
-    <img src="/assets/Frame 27.png" alt="" />
+    <div class="info">
+      <div class="info-container">
+        <div class="info-container-div1">
+          <p>From</p>
+          <p>To</p>
+          <p>Date</p>
+          <p>Weight</p>
+        </div>
+        <div class="info-container-div2">
+          <div>Singapore (SIN)</div>
+          <div>Incheon (ICN)</div>
+          <div class="date2">Sat, Mar 09, 2024</div>
+          <div>100kg</div>
+        </div>
+      </div>
+      <img class="btn-search" src="/assets/Frame 26 (1).png" alt="" />
+    </div>
     <div class="container">
       <div class="container1">
         <img class="mb scale" src="/assets/Frame 96.png" alt="" />
@@ -120,7 +173,7 @@
             <div class="tab-col">Wed, 06 Mar</div>
             <div class="tab-col">Thu, 07 Mar</div>
             <div class="tab-col">Fri, 08 Mar</div>
-            <div class="tab-col">Sat, 09 Mar</div>
+            <div class="tab-col date">Sat, 09 Mar</div>
             <div class="tab-col">Sun, 10 Mar</div>
             <div class="tab-col">Mon, 11 Mar</div>
             <div class="tab-col">Tue, 17 Mar</div>
@@ -199,6 +252,8 @@
       const price11 = document.querySelector(".price11");
       const price12 = document.querySelector(".price12");
       const price13 = document.querySelector(".price13");
+      const date = document.querySelector(".date");
+      const date2 = document.querySelector(".date2");
 
       const textValue = localStorage.getItem("input10");
       if (textValue) {
@@ -215,6 +270,11 @@
       const textValue4 = localStorage.getItem("input13");
       if (textValue4) {
         document.querySelector(".price13").textContent = textValue4;
+      }
+      const dateValue = localStorage.getItem("date");
+      if (dateValue) {
+        date.textContent = dateValue;
+        date2.textContent = dateValue;
       }
     </script>
   </body>
