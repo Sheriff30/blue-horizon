@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    .header {
+      width: 100%;
+    }
+
+    .map {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    .text {
+      margin-bottom: 30px;
+      width: 300px;
+    }
+
+    .form {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    .scale {
+      width: 350px;
+    }
+
+    .scale2 {
+      width: 395px;
+    }
+
+    .transform-y {
+      transform: translateY(-25px);
+    }
+
+    .wts {
+      height: 50px;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+  </style>
+  <body>
+    <img class="map" src="/assets/map.png" alt="" />
+    <img class="header" src="/assets/header1.png" alt="" />
+
+    <div class="form">
+      <img
+        class="text"
+        src="/assets/book air cargo with Blue Horizon Airlines.png"
+        alt=""
+      />
+      <img class="scale2" src="/assets/Frame 7.png" alt="" />
+      <img class="scale transform-y" src="/assets/Frame 9.png" alt="" />
+      <img class="scale transform-y" src="/assets/Frame 25.png" alt="" />
+      <a href="b-page.html">
+        <img class="scale" src="/assets/Frame 4.png" alt="" />
+      </a>
+    </div>
+    <img class="wts" src="/assets/logos_whatsapp-icon.png" alt="" />
+  </body>
+</html>
