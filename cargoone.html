@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/control.js" defer></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      body {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .table {
+        margin: 2rem;
+      }
+      .table-row {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+      }
+
+      .table-row div {
+        border: 1px solid gray;
+        padding: 1rem;
+        font-size: 1.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="/assets/2) CO - search options based on individual boxes.PNG"
+      alt=""
+    />
+    <div class="table">
+      <div class="table-row">
+        <div></div>
+        <div>Tue, 05 Mar</div>
+        <div>Wed, 06 Mar</div>
+        <div>Thu, 07 Mar</div>
+        <div>Fri, 08 Mar</div>
+        <div class="date">Sat, 09 Mar</div>
+        <div>Sun, 10 Mar</div>
+        <div>Mon, 11 Mar</div>
+        <div>Tue, 17 Mar</div>
+        <div>Wed, 18 Mar</div>
+      </div>
+
+      <div class="table-row">
+        <div>- Ana Cargo</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>15.08</div>
+        <div>15.08</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="table-row">
+        <div>- Finnair Cargo</div>
+        <div>7.00</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div>3.50</div>
+        <div></div>
+      </div>
+      <div class="table-row">
+        <div>- Blue Horizon</div>
+
+        <div class="price1"></div>
+        <div class="price2"></div>
+        <div class="price3"></div>
+        <div class="price4"></div>
+        <div class="price5"></div>
+        <div class="price6"></div>
+        <div class="price7"></div>
+        <div class="price8"></div>
+        <div class="price9"></div>
+      </div>
+      <div class="table-row">
+        <div>- Qatar Airways Cargo</div>
+
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+        <div>6.75</div>
+      </div>
+
+      <div class="table-row">
+        <div>- Turkish Cargo</div>
+        <div></div>
+        <div></div>
+        <div>5.90</div>
+        <div>5.90</div>
+        <div>5.90</div>
+        <div>5.90</div>
+        <div>5.90</div>
+        <div>5.90</div>
+        <div>5.90</div>
+      </div>
+      <div class="table-row">
+        <div>- Singapore Airlines Cargo</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>4.50</div>
+        <div>4.50</div>
+        <div>4.50</div>
+        <div>4.50</div>
+        <div>4.50</div>
+        <div>4.50</div>
+      </div>
+    </div>
+
+    <img
+      src="/assets/1) CO - search options based on individual boxes.PNG"
+      alt=""
+    />
+    <script>
+      const date = document.querySelector(".date");
+
+      const dateValue = localStorage.getItem("date");
+      if (dateValue) {
+        date.textContent = dateValue;
+        date2.textContent = dateValue;
+      }
+    </script>
+  </body>
+</html>
